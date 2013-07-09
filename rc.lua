@@ -243,8 +243,8 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    awful.key({ modkey, "Control" }, "v",   awful.tag.viewprev       ),
-    awful.key({ modkey, "Control" }, "l",  awful.tag.viewnext       ),
+--    awful.key({ modkey, "Control" }, "v",   awful.tag.viewprev       ),
+--    awful.key({ modkey, "Control" }, "l",  awful.tag.viewnext       ),
     awful.key({ modkey,         }, "Escape", awful.tag.history.restore),
     awful.key({ modkey }, "F12", function () awful.util.spawn("i3lock -d") end),
     awful.key({ modkey, }, "#52" ,  ssh_files),
@@ -267,10 +267,10 @@ globalkeys = awful.util.table.join(
         end),
 
     -- Layout manipulation
-    awful.key({ modkey, "Shift", "Control"   }, "v", function () awful.client.swap.byidx(  1)    end),
-    awful.key({ modkey, "Shift", "Control"   }, "l", function () awful.client.swap.byidx( -1)    end),
---    awful.key({ modkey, "Control" }, "v", function () awful.screen.focus_relative( 1) end),
---    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
+--    awful.key({ modkey, "Shift", "Control"   }, "v", function () awful.client.swap.byidx(  1)    end),
+--    awful.key({ modkey, "Shift", "Control"   }, "l", function () awful.client.swap.byidx( -1)    end),
+    awful.key({ modkey, "Control" }, "v", function () awful.screen.focus_relative( 1) end),
+    awful.key({ modkey, "Control" }, "l", function () awful.screen.focus_relative(-1) end),
     awful.key({ modkey,           }, "b", awful.client.urgent.jumpto),
 --    awful.key({ modkey,           }, "Tab",
 --        function ()
