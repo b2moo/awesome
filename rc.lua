@@ -103,6 +103,7 @@ function hook_battery ()
   file:close()
 
   _,_,status = string.find(infile, '^Battery 0: ([^\n]*)\n')
+  if status == nil then return end
   _,_,p = string.find(status,'(%d+)%%')
   p = tonumber(p)
 
